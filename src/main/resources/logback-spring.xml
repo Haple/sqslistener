@@ -1,0 +1,19 @@
+<configuration>
+
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+  <property name="CONSOLE_LOG_PATTERN"
+    value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%level] [%logger{0}.%method] [%mdc] %msg %n"/>
+
+  <appender name="CONSOLE_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+      <charset>UTF-8</charset>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="CONSOLE_STDOUT" />
+  </root>
+
+</configuration>

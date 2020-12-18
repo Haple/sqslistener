@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  localstack:
+    container_name: sample_localstack
+    healthcheck:
+      test: ["CMD-SHELL", "/health-check-scripts/aws-services-healthcheck.sh || exit 1"]
+      interval: 2s
+    image: localstack/localstack:0.11.2
+    ports:
+      - '4576:4576' # SQS
+      - '8055:8080' # Localstack UI
+    environment:
+      - SERVICES=sqs
+      - DEBUG=0
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - "./src/main/resources/aws/services:/docker-entrypoint-initaws.d"
+      - "./src/main/resources/aws/healthcheck:/health-check-scripts"
+      - '/var/run/docker.sock:/var/run/docker.sock'

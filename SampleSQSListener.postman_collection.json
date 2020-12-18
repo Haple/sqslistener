@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "705c7a37-5271-42a6-992d-b818dd83ade0",
+		"name": "SampleSQSListener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wrong payload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4576/queue/test_queue?Action=SendMessage&MessageBody={\n   \"foo\":\"ha\",\n   \"bar\":\"ha\"\n}",
+					"host": [
+						"localhost"
+					],
+					"port": "4576",
+					"path": [
+						"queue",
+						"test_queue"
+					],
+					"query": [
+						{
+							"key": "Action",
+							"value": "SendMessage"
+						},
+						{
+							"key": "MessageBody",
+							"value": "{\n   \"foo\":\"ha\",\n   \"bar\":\"ha\"\n}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Correct payload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4576/queue/test_queue?Action=SendMessage&MessageBody={\n   \"foo\":\"ha\",\n   \"bar\":\"ha\"\n}",
+					"host": [
+						"localhost"
+					],
+					"port": "4576",
+					"path": [
+						"queue",
+						"test_queue"
+					],
+					"query": [
+						{
+							"key": "Action",
+							"value": "SendMessage"
+						},
+						{
+							"key": "MessageBody",
+							"value": "{\n   \"foo\":\"ha\",\n   \"bar\":\"ha\"\n}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

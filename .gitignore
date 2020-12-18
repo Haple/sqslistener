@@ -1,0 +1,55 @@
+# IntelliJ #
+.idea/
+*.iml
+
+# Exec Files #
+*.exe
+*.dll
+
+# Text Files #
+*.xls
+*.xlsx
+*.xlsm
+*.csv
+*.doc
+*.docx
+*.pdf
+
+# ----- JAVA -----
+*.class
+.recommenders
+target/
+Evidences/
+*.meta/
+*.settings/
+*.classpath
+*.jsdtscope
+bin/
+.metadata
+.project
+native-libs/
+
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+*.zip
+*.7z
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# localstack
+.localstack/
+/aws/
+/.src/
